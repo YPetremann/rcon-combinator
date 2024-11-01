@@ -29,38 +29,48 @@
           "description": "The unique identifier for a product",
           "type": "object",
           "additionalProperties": {
-            "type": "array",
-            "required": [
-              "name"
-            ],
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "item",
-                    "fluid",
-                    "virtual",
-                    "entity",
-                    "recipe",
-                    "space-location",
-                    "asteroid-chunk",
-                    "quality"
-                  ]
-                },
-                "name": {
-                  "type": "string"
-                },
-                "count": {
-                  "type": "integer"
-                },
-                "quality": {
-                  "type": "string"
+            "oneOf": [
+              {
+                "type": "array",
+                "required": [
+                  "name"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "item",
+                        "fluid",
+                        "virtual",
+                        "entity",
+                        "recipe",
+                        "space-location",
+                        "asteroid-chunk",
+                        "quality"
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "count": {
+                      "type": "integer"
+                    },
+                    "quality": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
                 }
               },
-              "additionalProperties": false
-            }
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer"
+                }
+              }
+            ]
           }
         }
       },
@@ -71,7 +81,7 @@
         "$schema": {
           "type": "string"
         },
-        "error": {
+        "message": {
           "description": "Error occuring during the request",
           "type": "string"
         }
