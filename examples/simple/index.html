@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/main.css">
+  <script type="module" src="src/main.ts"></script>
+</head>
+<body>
+    <main>
+      <section>
+        <form id="server">
+          <h2>Server</h2>
+          <p><input type="text" name="host" placeholder="Server"></p>
+          <p><input type="text" name="port" placeholder="Port"></p>
+          <p><input type="password" name="password" placeholder="Password"></p>
+          <p><button id="connect" type="submit">Connect</button></p>
+          <p><button id="renew" type="submit">Renew</button></p>
+          <p><button id="disconnect" type="submit">Disconnect</button></p>
+          <p><textarea rows="12" name="output" placeholder="Output" disabled></textarea></p>
+        </form>
+        <form id="input">
+          <h2>Input</h2>
+          <p><textarea rows="12" name="payload" placeholder="Paypload"></textarea></p>
+          <p><button type="submit">Input</button></p>
+          <p><textarea rows="12" name="output" placeholder="Output" disabled></textarea></p>
+        </form>
+        <form id="output">
+          <h2>Output</h2>
+          <p><textarea rows="12" name="payload" placeholder="Paypload"></textarea></p>
+          <p><button type="submit">Output</button></p>
+          <p><textarea rows="12" name="output" placeholder="Output" disabled></textarea></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
