@@ -89,10 +89,14 @@ commands.add_command("rcon-input", "send signals from circuit to RCON.", protect
   local auto_sections = true
   local sections = {}
   if event.parameter then
-    local requests = json_parse(event.parameter).requests
-    if #requests > 0 then
-      auto_sections = false
-      for _, name in ipairs(requests) do sections[name] = {} end
+    game.print("'" .. event.parameter .. "'")
+    local root = json_parse(event.parameter)
+    if root then
+      if not root.requests then error("Must provide root.requests") end
+      if #root.requests > 0 then
+        auto_sections = false
+        for _, name in ipairs(root.requests) do sections[name] = {} end
+      end
     end
   end
 
@@ -128,7 +132,7 @@ commands.add_command("rcon-input", "send signals from circuit to RCON.", protect
       end
     end
   end
-  return helpers.table_to_json({ ["$schema"] = schema, groups = sections })
+  return { groups = sections }
 end))
 
 commands.add_command("rcon-output", "send signals from RCON to circuit.", protect(function(event)
