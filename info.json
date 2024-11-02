@@ -1,6 +1,6 @@
 {
   "name": "rcon-combinator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "title": "RCON Combinator",
   "author": "Thaui",
   "description": "Add combinator for RCON communication with external software.",
@@ -10,6 +10,9 @@
     "readme": "README.md",
     "gallery": [
       "gallery/**.png"
+    ],
+    "ignore": [
+      "examples/**"
     ],
     "license": "LICENSE",
     "sync_portal_details": true

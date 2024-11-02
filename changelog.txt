@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2024-11-02
+  Changes:
+    - Update metadata
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2024-11-02
+  Features:
+    - Add the rcon combinator
+    - Add the /rcon-input command
+    - Add the /rcon-output command
