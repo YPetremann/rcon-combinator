@@ -3,8 +3,16 @@
   "version": "2.0.0",
   "title": "RCON Combinator",
   "author": "Thaui",
-  "description": "A mod that adds input and output combinators for RCON communication.",
+  "description": "Add combinator for RCON communication with external software.",
   "dependencies": [],
   "factorio_version": "2.0",
+  "package": {
+    "readme": "README.md",
+    "gallery": [
+      "gallery/**.png"
+    ],
+    "license": "LICENSE",
+    "sync_portal_details": true
+  },
   "license": "MIT"
 }
